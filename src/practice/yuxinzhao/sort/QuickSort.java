@@ -2,12 +2,11 @@ package practice.yuxinzhao.sort;
 
 import java.util.Arrays;
 
-import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
         // Create an integer array
-        int arr[] = {98, 0, 5, -9, 132, 3, -7, 0};
+        int[] arr = {98, 0, 5, -9, 132, 3, -7, 0};
 
         // Call the quickSort function to sort the array
         quickSort(arr, 0, arr.length - 1);
