@@ -47,7 +47,7 @@ public class QuickSort {
             }
         }
 
-        // Recursively sort the left and right subarrays
+        // Recursively sort the left and right sub arrays
         if (left < r) {
             quickSort(arr, left, r);
         }
