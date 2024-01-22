@@ -1,4 +1,4 @@
-package practice.yuxinzhao;
+package practice.yuxinzhao.queue;
 
 public class Sparsearray {
     //    稀疏数组
