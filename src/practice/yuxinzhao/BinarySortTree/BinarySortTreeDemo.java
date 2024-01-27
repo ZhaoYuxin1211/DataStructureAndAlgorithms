@@ -113,19 +113,28 @@ class BinarySortTree {
             } else {
                 // Case 4: Node to be deleted has only one child
                 if (targetNode.left != null) {
-                    // If the left child exists, link parent to the left child
-                    if (parentNode.left.value == value) {
-                        parentNode.left = targetNode.left;
-                    } else {
-                        parentNode.right = targetNode.left;
+                    if (parentNode != null) {
+                        // If the left child exists, link parent to the left child
+                        if (parentNode.left.value == value) {
+                            parentNode.left = targetNode.left;
+                        } else {
+                            parentNode.right = targetNode.left;
+                        }
+                    }else {
+                        root = targetNode.left;
                     }
                 } else {
-                    // If the right child exists, link parent to the right child
-                    if (parentNode.left.value == value) {
-                        parentNode.left = targetNode.right;
-                    } else {
-                        parentNode.right = targetNode.right;
+                    if (parentNode != null){
+                        // If the right child exists, link parent to the right child
+                        if (parentNode.left.value == value) {
+                            parentNode.left = targetNode.right;
+                        } else {
+                            parentNode.right = targetNode.right;
+                        }
+                    }else {
+                        root =targetNode.right;
                     }
+
                 }
             }
 
